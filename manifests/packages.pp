@@ -10,19 +10,19 @@ class pwk::packages {
 #===========================================
 # Ensure rubygems so we can use gem provider
 #===========================================
-	package { 'rubygems':
-		ensure => present,
-	}
+  package { 'rubygems':
+    ensure => present,
+  }
 #===========================================
 # Install packages i care about :)
 #===========================================
-	package { 'vim-enhanced':
-		ensure  => 'installed',
-	}
-	package { 'mlocate':
-		ensure  => 'installed',
-	}
-	package { 'tree':
+  package { 'vim-enhanced':
+    ensure  => 'installed',
+  }
+  package { 'mlocate':
+    ensure  => 'installed',
+  }
+  package { 'tree':
     ensure  => 'installed',
   }
   package { 'puppet-lint':
