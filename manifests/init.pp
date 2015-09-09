@@ -7,5 +7,5 @@
 
 class pwk {
   class { '::pwk::packages': }
-	class { '::pwk::osconfig': }
+  class { '::pwk::osconfig': }
 }
