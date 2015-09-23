@@ -22,6 +22,7 @@ class pwk::osconfig {
     type => 'rsa',
     key =>  'AAAAB3NzaC1yc2EAAAADAQABAAABAQCvazcy/ZyZCfsHljtK76VZXplMylQweipO4tHs9bUdQM7Jnl5//6akwB2lj1bQbC4n3gs3evI6ZOWPL8tnfLdtR0zQAWuGIfpEX9bbbzUWsm5bKoaglrhTWKToDC1qQcMEe7nLtqpAmPw95lwJWyZZv1MQKAzDuXkTwJUebytLn3Rji1uRSNpV8W7RTOvbu5PFFDNAJYekNKRnvuCqZeU8e8WoyTXkswN0OLblXp06x94zsyBUN9ETqmz5rck65QcGYtaGBDF+/ghk5iUwt5MKZzLYlC8zWgp4fB/aq7yiZxFFGigM5NvZlOk6hpnfw2NILPWJ5bzQJygtdDlatVWz',
   }
+  # Sudoers file change to nopasswd for wheel group
   augeas { 'sudo':
     context => '/files/etc/sudoers',
     changes => [
@@ -33,7 +34,7 @@ class pwk::osconfig {
   }
 
 #===========================================
-# Disable password auth, key auth only
+# Disable password auth, ssh-key auth only
 #===========================================
   package { "openssh-server":
     ensure => "installed",
