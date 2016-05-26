@@ -10,7 +10,7 @@ class pwk::packages {
 #===========================================
 # Ensure repos
 #===========================================
-$passenger_repo = "[passenger]
+$passenger_repo = '[passenger]
 name=passenger
 baseurl=https://oss-binaries.phusionpassenger.com/yum/passenger/el/$releasever/$basearch
 repo_gpgcheck=1
@@ -29,7 +29,8 @@ enabled=1
 gpgkey=https://packagecloud.io/gpg.key
 sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
-"
+'
+
   file { '/etc/yum.repos.d/passenger.repo':
     mode     => '0600',
     owner    => 'root',
