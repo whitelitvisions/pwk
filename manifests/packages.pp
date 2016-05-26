@@ -30,7 +30,7 @@ gpgkey=https://packagecloud.io/gpg.key
 sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 "
-  file { '/etc/yum.repos.d/passenger.repo'
+  file { '/etc/yum.repos.d/passenger.repo':
     mode     => '0600',
     owner    => 'root',
     group    => 'root',
