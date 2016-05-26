@@ -52,10 +52,8 @@ class pwk::osconfig {
       "set PermitRootLogin no",
       "set PubkeyAuthentication yes",
       "set PasswordAuthentication no",
-      "set Port 22",
-      "set PermitRootLogin no"
+      "set Port 22"
     ],
     notify => Service["sshd"],
   }
-
 }
