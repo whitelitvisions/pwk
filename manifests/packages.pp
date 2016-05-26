@@ -17,19 +17,22 @@ class pwk::packages {
 # Install packages i care about :)
 #===========================================
   package { 'vim-enhanced':
-    ensure  => 'installed',
+    ensure  => installed,
   }
   package { 'mlocate':
-    ensure  => 'installed',
+    ensure  => installed,
   }
   package { 'tree':
-    ensure  => 'installed',
+    ensure  => installed,
   }
   package { 'puppet-lint':
-    ensure  => 'installed',
-    provider => 'gem',
+    ensure  => installed,
+    provider => gem,
   }
   package { 'git':
-    ensure  => 'installed',
+    ensure  => installed,
+  }
+  package { 'epel-release':
+    ensure => installed,
   }
 }
